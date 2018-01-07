@@ -4,7 +4,7 @@ class WeatherDataFetcher {
         this.city = 'Barcelona';
         this.country = 'ES';
         this.APPID = 'd783aaa006f35d3d881745eba04e89ad';
-        this.apiSetup = {            
+        this.requestSetup = {            
             method: 'GET'
         }
     }
@@ -17,10 +17,7 @@ class WeatherDataFetcher {
     }
 
     loadData() {
-        const weatherRequest = new Request(this.buildUrlWithParams(), this.apiSetup);
-
-        console.log(this.setup);
-        console.log(weatherRequest);
+        const weatherRequest = new Request(this.buildUrlWithParams(), this.requestSetup);
 
         return fetch(weatherRequest)
             .then(response => {

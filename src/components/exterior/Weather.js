@@ -9,10 +9,12 @@ class Weather extends Component {
             city: 'Barcelona',
             date: new Date(),
             temperature: {
-                //TODO: Link it to OpenWeatherMap API
-                value: 22,
-                units: 'C',
-                data: new WeatherDataFetcher().loadData()
+                units: 'C'
+            },
+            weather: {
+                main: {
+                    temp: '--'
+                }
             }
         }
         this.style = {
@@ -20,11 +22,45 @@ class Weather extends Component {
         }
     }
 
+    componentDidMount() {
+        const weatherData = new WeatherDataFetcher().loadData();
+
+        weatherData.then(data => {
+            console.log(data);
+
+            data.main.temp = this.setTemperatureUnits(data.main.temp);
+            
+            this.setState({
+                weather: data
+            });
+        });
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+    }
+
+    setTemperatureUnits(temperature) {
+        if (typeof temperature === 'number') {
+            switch (this.state.temperature.units) {
+                case 'C':
+                    return Math.round(temperature - 274.0);
+                    break;
+                case 'K':
+                    return temperature;
+                    break;
+                default:
+                    return temperature;
+                    break;
+            }   
+        }
+        else return temperature;
+    }
+
     render() {
         return (
             <Paper style={this.style} zDepth={2}>
                 <p>{this.state.city} {this.state.date.toDateString()}</p>
-                <h1>{this.state.temperature.value} {this.state.temperature.units}</h1>
+                <h1>{this.state.weather.main.temp} {this.state.temperature.units}</h1>
             </Paper>
         )
     }
