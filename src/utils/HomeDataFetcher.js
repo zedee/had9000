@@ -21,13 +21,21 @@ class HomeDataFetcher {
                 resolve({ 
                     data: { 
                         temp: 0.0,
-                        lighting: {
-                            dining: true,
-                            bedroom: false,
-                            kitchen: false
-                        },
+                        lighting: [
+                            {
+                                name: 'Dining Room',
+                                status: true
+                            },
+                            {
+                                name: 'Bedroom',
+                                status: false
+                            },
+                            {
+                                name: 'Kitchen',
+                                status: false
+                            }
+                        ],
                         presence: {
-                            dining: false,
                             lastSeen: '2017-01-08 08:30:15'
                         },
                         misc: {

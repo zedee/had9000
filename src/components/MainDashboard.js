@@ -12,7 +12,7 @@ const MainDashboard = () => (
         <Weather />
     </Paper>
     <Paper className="paperBlock paperBlock-50" zDepth={1}>
-        <h1>Internal data</h1>
+        <h1>Your Home</h1>
         <ControlPanel />
     </Paper>
   </div>

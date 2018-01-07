@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Paper from 'material-ui/Paper';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import InternalTempPanel from './InternalTempPanel';
+import LightControl from './LightControl';
 
 class ControlPanel extends Component {
     render() {
@@ -12,10 +13,7 @@ class ControlPanel extends Component {
                     <InternalTempPanel />
                 </Paper>
                 <Paper className="paperBlock paperBlock-50" zDepth={1}>
-                    <h3>Lighting</h3>
-                    <p>Dining Room: </p>
-                    <p>Bedroom: </p>
-                    <p>Kitchen: </p>
+                    <LightControl />
                 </Paper>            
                 <Paper className="paperBlock paperBlock-50" zDepth={1}>
                     <h3>Presence</h3>
