@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Paper from 'material-ui/Paper';
+import WeatherDataFetcher from '../../utils/WeatherDataFetcher';
 
 class Weather extends Component {
     constructor (props) {
@@ -10,7 +11,8 @@ class Weather extends Component {
             temperature: {
                 //TODO: Link it to OpenWeatherMap API
                 value: 22,
-                units: 'C'
+                units: 'C',
+                data: new WeatherDataFetcher().loadData()
             }
         }
         this.style = {
