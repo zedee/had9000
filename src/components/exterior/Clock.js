@@ -5,10 +5,8 @@ class Clock extends Component {
     constructor (props) {
         super(props);
         this.state = {
+            date: new Date(),
             time: new Date()            
-        };
-        this.style = {
-            padding: 10
         };
     }
 
@@ -31,8 +29,8 @@ class Clock extends Component {
 
     render() {
         return (
-            <Paper style={this.style} zDepth={2}>     
-                <p>Current Time:</p>           
+            <Paper className="paperBlock paperBlock-100" zDepth={2}>
+                <p>{this.state.date.toDateString()}</p>
                 <h1>{this.state.time.toLocaleTimeString()}</h1>
             </Paper>
         )

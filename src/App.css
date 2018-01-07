@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+.App {  
+  width: 100%;  
 }
 
 .App-logo {
@@ -9,18 +9,12 @@
 }
 
 .App-header {
+  text-align: center;
+  width: 100%;
   background-color: rgb(221, 221, 221);
   height: 150px;
   padding: 20px;
   color: rgb(32, 32, 32);
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
 }
 
 @keyframes App-logo-spin {
@@ -30,11 +24,17 @@
 
 /** Styles for Panel Components **/
 
-.MainDashboard-50-block {
-  /*height: 640px;*/
-  width: 50%;
+.paperBlock {
   margin: 0;
   padding: 10px;
-  text-align: center;
   display: flex;
+  flex-direction: column;
+}
+
+.paperBlock-50 {
+  width: 50%;  
 };
+
+.paperBlock-100 {
+  width: 100%;
+}

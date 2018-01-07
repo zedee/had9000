@@ -11,11 +11,8 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <Header />
-          <MainDashboard />          
-          <p className="App-intro">
-            {new Date().getFullYear()}
-          </p>
-        </div>
+          <MainDashboard />
+        </div>        
       </MuiThemeProvider>
     );
   }
