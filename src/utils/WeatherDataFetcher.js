@@ -16,16 +16,23 @@ class WeatherDataFetcher {
         return this.url.toString();
     }
 
-    loadData() {
-        const weatherRequest = new Request(this.buildUrlWithParams(), this.requestSetup);
+    loadData(mode) {
+        if (mode === 'offline') {
+            return new Promise((resolve, reject) => {
+                resolve({ main: { temp: 0.0 }});
+            })
+        }
+        else {
+            const weatherRequest = new Request(this.buildUrlWithParams(), this.requestSetup);
 
-        return fetch(weatherRequest)
-            .then(response => {
-                return response.json()
-            })
-            .catch(error => {
-                console.error('Something went terribly wrong :(');
-            })
+            return fetch(weatherRequest)
+                .then(response => {
+                    return response.json()
+                })
+                .catch(error => {
+                    console.error('Something went terribly wrong :(');
+                });
+        }
     }
 }
 

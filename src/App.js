@@ -13,7 +13,7 @@ class App extends Component {
           <Header />
           <MainDashboard />          
           <p className="App-intro">
-            2018
+            {new Date().getFullYear()}
           </p>
         </div>
       </MuiThemeProvider>

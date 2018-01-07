@@ -23,7 +23,7 @@ class Weather extends Component {
     }
 
     componentDidMount() {
-        const weatherData = new WeatherDataFetcher().loadData();
+        const weatherData = new WeatherDataFetcher().loadData('offline');
 
         weatherData.then(data => {
             console.log(data);
@@ -33,6 +33,9 @@ class Weather extends Component {
             this.setState({
                 weather: data
             });
+        })
+        .catch(error => {
+            console.log(error);
         });
     }
 
