@@ -21,9 +21,10 @@ class ControlPanel extends Component {
                 </Paper>
                 <Paper className="paperBlock paperBlock-50" zDepth={1}>                
                     <Card>
-                        <CardHeader
+                        <CardHeader 
+                            style={{paddingRight: 0}}
                             title="Dogie Cam"
-                            subtitle="Your dog has plenty of food"
+                            subtitle="Your dog has food"
                         />
                         <CardMedia>
                         <video src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" alt="" />
