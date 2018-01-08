@@ -7,7 +7,7 @@ import LightControl from './LightControl';
 class ControlPanel extends Component {
     render() {
         return (
-            <div>
+            <div className="flexDisplay">
                 <Paper className="paperBlock paperBlock-50" zDepth={1}>
                     <h3>Ambient</h3>
                     <InternalTempPanel />
@@ -21,14 +21,14 @@ class ControlPanel extends Component {
                 </Paper>
                 <Paper className="paperBlock paperBlock-50" zDepth={1}>                
                     <Card>
-                    <CardHeader
-                        title="Dogie Cam"
-                        subtitle="Your dog has plenty of food"
-                    />
-                    <CardMedia>
-                    <video src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" alt="" />
-                    </CardMedia>
-                </Card>
+                        <CardHeader
+                            title="Dogie Cam"
+                            subtitle="Your dog has plenty of food"
+                        />
+                        <CardMedia>
+                        <video src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" alt="" />
+                        </CardMedia>
+                    </Card>
                 </Paper>                
             </div>
         );

@@ -5,8 +5,15 @@ body {
 }
 
 div {
-  display: flex;
   flex-wrap: wrap;
+}
+
+div.blockDisplay {
+  display: block;
+}
+
+div.flexDisplay {
+  display: flex;
 }
 
 footer {

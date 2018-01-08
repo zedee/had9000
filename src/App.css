@@ -38,3 +38,7 @@
 .paperBlock-100 {
   width: 100%;
 }
+
+.listBlock {
+  display: block;
+}
