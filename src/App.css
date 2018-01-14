@@ -26,9 +26,10 @@
 
 .paperBlock {
   margin: 0;
-  padding: 10px;
+  padding: 0.75em;
   display: flex;
   flex-direction: column;
+  min-width: 200px;
 }
 
 .paperBlock-50 {

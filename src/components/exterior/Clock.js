@@ -4,6 +4,7 @@ import Paper from 'material-ui/Paper';
 class Clock extends Component {
     constructor (props) {
         super(props);
+        //Initial state
         this.state = {
             date: new Date(),
             time: new Date()            

@@ -2,6 +2,7 @@ import React from 'react';
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import Avatar from 'material-ui/Avatar';
+import TextField from 'material-ui/TextField';
 
 const PizzaBot = () => (
     <List>        
@@ -16,6 +17,10 @@ const PizzaBot = () => (
             secondaryTextLines={1}
         >
         </ListItem>
+        <TextField
+                hintText="Say hi to Pizza Bot to start ordering your pizza"
+                style={{width: '100%'}}
+        />
     </List>
 );
 
