@@ -13,14 +13,16 @@ class Weather extends Component {
                 units: 'K'
             },
             humidity: 0,
-            pressure: 0
+            pressure: 0,
+            isLoadingData: false,
+            hasLoadErrors: false
         }
 
         this.temperatureUnitsHandler = this.temperatureUnitsHandler.bind(this)
     }
 
     componentDidMount() {
-        const weatherData = new WeatherDataFetcher().loadData();
+        const weatherData = new WeatherDataFetcher().loadData('local');
 
         weatherData.then(data => {
             console.log(data);
